@@ -15,7 +15,7 @@ class Peminjaman extends CI_Controller {
     public function index(){
         $data['tes'] = '';
         
-        $data['all_data'] = $this->m_master->getAllDataWithParameter('t_peminjaman', 'status !=', 'selesai');
+        $data['all_data'] = $this->m_master->getAllData('t_peminjaman');
         $data['all_buku'] = $this->m_master->getAllData('m_buku');
         $data['all_perpustakaan'] = $this->m_master->getAllData('m_perpustakaan');
         $data['all_anggota'] = $this->m_master->getAllData('m_anggota');
